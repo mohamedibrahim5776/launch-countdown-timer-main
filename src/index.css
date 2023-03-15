@@ -1,0 +1,136 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
+}
+:root {
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark-blue-mostly-black : hsl(234, 17%, 12%);
+}
+body {
+    background-color: var(--Very-dark-blue);
+}
+.container {
+display: grid;
+align-items: center;
+text-align: center;
+margin: 100px auto 0;
+background-image: url(../images/bg-stars.svg);
+background-size: cover;
+}
+.container .head {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px 0 ;
+    font-size: 30px;
+    font-weight: lighter;
+    color: white;
+}
+.row {
+    display: flex;
+    gap: 20px ;
+    margin: 0 auto 150px;
+    width: 65%;
+    font-size: 30px; 
+    justify-content: center;
+}
+.col {
+    /* background-color: tomato; */
+    /* text-align: center; */
+    margin: 30px 0;
+    width: 25%;
+    /* border-radius: 10px; */
+}
+
+.num {
+    color: var(--Soft-red);
+    background-color: var(--Dark-desaturated-blue);
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 200%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width:967px) {
+    .col {
+        width: 13%;
+    }
+    .num {
+        /* font-size: 60px; */
+    }
+}
+.cover {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--Very-dark-blue-mostly-black);
+    opacity: 0.2;
+}
+.num::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: black;
+}
+.num::before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: black;
+}
+.col h6 {
+    color: var(--Grayish-blue);
+    font-weight: lighter;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.icon {
+    background-image: url(../images/pattern-hills.svg);
+    background-size: cover;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.icon i {
+    color: var(--Grayish-blue);
+    font-size: 25px;
+    cursor: pointer;
+}
+.icon i:hover {
+    color: var(--Soft-red);
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    color: var(--Grayish-blue);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
